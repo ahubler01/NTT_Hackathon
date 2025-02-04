@@ -169,3 +169,10 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Datasets
+src/data/df_omie_blind.csv
+src/data/df_omie_labelled.csv
+src/data/df_omie_categories.csv
+src/data/unit_list.csv
+src/data/filtered_categories.csv
