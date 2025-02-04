@@ -1,0 +1,22 @@
+Idea 1  - treat each unique Codigo as a separate time series. 
+
++ Build Individual Models per Plant and tailor the model to the specific characteristics of each plant.
+- computationally expensive and labor-intensive if you have many plants.
+
+Idea 2 - Global Forecasting Approach
+
++ Models which can learn from all plants simultaneously and capture common patterns.
+- Requires additional model tuning and techniques to account for plant-specific differences.
+
+    * Reshape  data into a “long” format where each record includes an identifier (Codigo), the timestamp (fechaHora), and the target value (Energia).
+
+    * Use a global forecasting model—many recent forecasting frameworks (e.g., DeepAR, N-BEATS, or even LightGBM-based models with 
+    lag features) accept a time series identifier and handle multi-horizon forecasting.
+
+    * Train the model using all available his data and then produce forecasts for each plant over the forecast horizon.
+
+Idea 3 (kinda similar to 2)
+
++ The key is missing in some cases: For example, Challenge 2’s blind dataset does not have a Codigo column.
++ We can rely on plant characteristics rather than a direct join key, in this case *codigo*, 
++ For instance, we can try matching records based on similar patterns and external features.
