@@ -171,8 +171,19 @@ cython_debug/
 .pypirc
 
 # Datasets
+data/Archive.zip
+data/data.zip
 data/df_omie_blind.csv
 data/df_omie_labelled.csv
 data/df_omie_categories.csv
 data/unit_list.csv
 data/filtered_categories.csv
+data/df_omie_blind(in).csv
+data/df_omie_labelled(in).csv
+data/df_omie_categories(in).csv
+data/unit_list(in).csv
+data/filtered_categories(in).csv
+
+challenge_one/01_Model_Armand.ipynb
+challenge_one/Armand_Challenge.ipynb
+challenge_one/Challenge1_404TeamNotFound.csv
